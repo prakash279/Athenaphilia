@@ -36,6 +36,10 @@ form.onsubmit = (e) => {
         if (pInput.value == "") {
             pField.classList.add("error");
             pField.classList.remove("valid");
+        }
+        else if(pInput.value == "admin" || eInput.value == "admin@athenaphilia.com"){
+            document.cookie = "Loggedin = True"
+            window.location.replace("../input/input.html");
         } else {
             pField.classList.remove("error");
             pField.classList.add("valid");
