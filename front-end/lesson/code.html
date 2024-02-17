@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Lesson Planner</h1>
+  <div class="container">
+    <form action="action_page.php" method="post">
+    <div class="dropdown">
+        <label for="subject">Select Subject:</label>
+        <select id="subject" name="subject">
+            <option value="Eco">Economics</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="english">English</option>
+        </select>
+    </div>
+    <div class="dropdown">
+        <label for="grade">Select Grade:</label>
+        <select id="grade" name="grade">
+            <option value="grade1">Grade 1</option>
+            <option value="grade2">Grade 2</option>
+            <option value="grade3">Grade 3</option>
+            <option value="grade4">Grade 4</option>
+            <option value="grade5">Grade 5</option>
+            <option value="grade1">Grade 6</option>
+            <option value="grade2">Grade 7</option>
+            <option value="grade3">Grade 8</option>
+            <option value="grade4">Grade 9</option>
+            <option value="grade5">Grade 10</option>
+        </select>
+    </div>
+
+    <label for="text-input">Enter Text:</label>
+    <input type="text" id="text-input" name="text-input" placeholder="Enter Topic">
+    <br>
+    <input type="checkbox" id="aim" class="checkbox-item" name="checkboxes[]" value="Aim">
+    <label for="aim"> Aim. </label><br>
+    <input type="checkbox" id="chapter" class="checkbox-item" name="checkboxes[]" value="Why this chapter?">
+    <label for="chapter"> Why this chapter?</label><br>
+    <input type="checkbox" id="pre" class="checkbox-item" name="checkboxes[]" value="Pre-requisite Knowledge.">
+    <label for="pre"> Pre-requisite Knowledge. </label><br>
+    <input type="checkbox" id="open" class="checkbox-item" name="checkboxes[]" value="Opening.">
+    <label for="open"> Opening. </label><br>
+    <input type="checkbox" id="ins" class="checkbox-item" name="checkboxes[]" value="Instructional Activities.">
+    <label for="ins"> Instructional Activities.</label><br>
+    <input type="checkbox" id="act" class="checkbox-item" name="checkboxes[]" value="Practice Activities.">
+    <label for="act"> Practice Activities. </label><br>
+    <input type="checkbox" id="asses" class="checkbox-item" name="checkboxes[]" value="Assessment.">
+    <label for="asses"> Assessment. </label><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+  </div>
+  <img class="picture" src="C:\Users\siddh\Downloads\front\front-end\lesson\image-1.png" alt="Description of the image">
+</body>
+</html>
