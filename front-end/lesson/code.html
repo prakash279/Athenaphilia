@@ -10,14 +10,14 @@
 <body>
   <h1>Lesson Planner</h1>
   <div class="container">
-    <form action="action_page.php" method="post">
+    <form action="" method="post" id="lessonForm">
     <div class="dropdown">
         <label for="subject">Select Subject:</label>
         <select id="subject" name="subject">
-            <option value="Eco">Economics</option>
-            <option value="science">Science</option>
-            <option value="history">History</option>
-            <option value="english">English</option>
+            <option value="Economics">Economics</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="English">English</option>
         </select>
     </div>
     <div class="dropdown">
@@ -28,36 +28,91 @@
             <option value="grade3">Grade 3</option>
             <option value="grade4">Grade 4</option>
             <option value="grade5">Grade 5</option>
-            <option value="grade1">Grade 6</option>
-            <option value="grade2">Grade 7</option>
-            <option value="grade3">Grade 8</option>
-            <option value="grade4">Grade 9</option>
-            <option value="grade5">Grade 10</option>
+            <option value="grade6">Grade 6</option>
+            <option value="grade7">Grade 7</option>
+            <option value="grade8">Grade 8</option>
+            <option value="grade9">Grade 9</option>
+            <option value="grade10">Grade 10</option>
         </select>
     </div>
-
     <label for="text-input">Enter Text:</label>
     <input type="text" id="text-input" name="text-input" placeholder="Enter Topic">
     <br>
-    <input type="checkbox" id="aim" class="checkbox-item" name="checkboxes[]" value="Aim">
+    <input type="checkbox" id="aim" class="checkbox-item" name="checkboxes[]" value="Aim" checked>
     <label for="aim"> Aim. </label><br>
-    <input type="checkbox" id="chapter" class="checkbox-item" name="checkboxes[]" value="Why this chapter?">
+    <input type="checkbox" id="chapter" class="checkbox-item" name="checkboxes[]" value="Why this chapter?" checked>
     <label for="chapter"> Why this chapter?</label><br>
-    <input type="checkbox" id="pre" class="checkbox-item" name="checkboxes[]" value="Pre-requisite Knowledge.">
+    <input type="checkbox" id="pre" class="checkbox-item" name="checkboxes[]" value="Pre-requisite Knowledge." checked>
     <label for="pre"> Pre-requisite Knowledge. </label><br>
-    <input type="checkbox" id="open" class="checkbox-item" name="checkboxes[]" value="Opening.">
+    <input type="checkbox" id="open" class="checkbox-item" name="checkboxes[]" value="Opening." checked>
     <label for="open"> Opening. </label><br>
-    <input type="checkbox" id="ins" class="checkbox-item" name="checkboxes[]" value="Instructional Activities.">
+    <input type="checkbox" id="ins" class="checkbox-item" name="checkboxes[]" value="Instructional Activities." checked>
     <label for="ins"> Instructional Activities.</label><br>
-    <input type="checkbox" id="act" class="checkbox-item" name="checkboxes[]" value="Practice Activities.">
+    <input type="checkbox" id="act" class="checkbox-item" name="checkboxes[]" value="Practice Activities." checked>
     <label for="act"> Practice Activities. </label><br>
-    <input type="checkbox" id="asses" class="checkbox-item" name="checkboxes[]" value="Assessment.">
+    <input type="checkbox" id="asses" class="checkbox-item" name="checkboxes[]" value="Assessment." checked>
     <label for="asses"> Assessment. </label><br><br>
     <input type="submit" value="Submit">
 </form>
 
+<div class="chat_container">
+<!-- Placeholder for the paragraph -->
+<div id="paragraphContainer">
 
-  </div>
-  <img class="picture" src="C:\Users\siddh\Downloads\front\front-end\lesson\image-1.png" alt="Description of the image">
+</div>
+
+</div>
+
+</div>
+  <img class="picture" src="image-1.png" alt="Description of the image">
 </body>
+
+<script>
+  document.getElementById('lessonForm').addEventListener('submit', async() => {
+    event.preventDefault();
+    var form = event.target;
+    var subject = form.elements['subject'].value;
+    var grade = form.elements['grade'].value;
+    var topic = form.elements['text-input'].value;
+    var checkboxes = form.elements['checkboxes[]'];
+    var resultString = "[INST] # Lesson Plan Generation\n\n";
+    resultString += "## Subject: " + subject + "\n";
+    resultString += "## Grade Level: " + grade + "\n";
+    resultString += "## Topic: " + topic + "\n\n";
+    resultString += "## Learning Objectives:\n";
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        resultString += "* ... (" + checkboxes[i].value + ")\n";
+      }
+    }
+    resultString += "\n";
+    resultString += "## Opening :\nCraft an engaging scenario related to " + topic + " that piques students' curiosity and motivates them to explore the topic further. Use questions, demonstrations, or humor to capture their attention. Consider incorporating technology or real-world examples.\n\n";
+    resultString += "## Instructional Activities:\nDesign a hands-on activity that allows students to experience " + topic + " firsthand and make observations. Encourage collaboration, discussion, and critical thinking. Consider using common materials or simulations.\n\n";
+    resultString += "## Practice Activities:\nGenerate 3-5 engaging and accessible activities that students can do at home independently or with family to explore and deepen their understanding of " + topic + ". Prioritize activities that are: Fun and motivating: Use humor, challenges, or real-world applications to capture their interest. Low-barrier entry: Utilize common household items or readily available materials. Varied and interactive: Include activities that cater to different learning styles (visual, kinesthetic, auditory). Connected to the curriculum: Ensure activities link back to key concepts and reinforce classroom learning. Optional additions: Teacher guidance: Suggest ways the teacher can introduce and promote these activities to students. Differentiation: Provide variations for different skill levels or interests. Technology integration: Suggest ways to incorporate technology if available (e.g., simulations, online resources).\n\n";
+    resultString += "## Assessment:\nGenerate 3-5 engaging assessment questions that are fun, creative, and challenge students to apply their understanding of " + topic + " in a unique way. Consider using storytelling, simulations, or role-playing scenarios.\n\n";
+    resultString += "[/INST]";
+    // Display result
+    // document.getElementById('result').innerHTML = resultString;
+    resultString = JSON.stringify(resultString);
+    console.log(resultString);
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", 'http://127.0.0.1:5000/api/', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ key:'value', data: resultString}));
+    xhr.onload = function() {
+      if(xhr.status==200) {
+        var paragraph = document.createElement('p');
+        paragraph.textContent = xhr.responseText;
+        document.getElementById('paragraphContainer').appendChild(paragraph);
+        console.log("yayy: ", xhr.responseText);
+      } else {
+        console.log("Nayyy: ", xhr.statusText);
+      }
+    }
+
+
+  });
+  
+</script>
 </html>
