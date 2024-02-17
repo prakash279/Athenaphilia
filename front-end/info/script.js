@@ -36,7 +36,7 @@ form.onsubmit = (e) => {
         if (pInput.value == "") {
             pField.classList.add("error");
             pField.classList.remove("valid");
-        } else {
+        } else if (pInput.value == "admin" && eInput.value == "admin@athenaphilia.com") {
             pField.classList.remove("error");
             pField.classList.add("valid");
         }
