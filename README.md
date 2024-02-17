@@ -1,4 +1,4 @@
-# Athenaphile
+# Athenaphilia
 This is a teaching assistant project.
 
 We did a survey to help our teachers to reduce their workload.
