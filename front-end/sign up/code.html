@@ -30,9 +30,13 @@
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
             </div>
-            <button type="submit">Create Account</button>
+            <button id="submi">Create Account</button>
         </form>
         <p>Already have an account? <a href="../info/login.html">Sign in</a></p>
     </div>
 </body>
+<script> document.getElementById("submi").onclick = function() {
+    window.location.replaceWith("http://127.0.0.1:5500/front-end/info/login.html")
+}
+</script>
 </html>
