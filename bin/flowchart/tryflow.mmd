@@ -1,35 +1,42 @@
-graph TD
-
-Practice_Activities(Practice Activities)
-P1(Open-ended Question)
-P2(Multiple Choice)
-P3(Short Answer)
-P4(Calculation)
-P5(Design Challenge)
-
-Practice_Activities-->P1
-Practice_Activities-->P2
-P2-->P2_1("Explain Gravity")
-Practice_Activities-->P3
-P3-->P3_1("Weight & Acceleration")
-Practice_Activities-->P4
-P4-->P4_1("Gravity Force Calculation")
-Practice_Activities-->P5
-
-Assessment(Assessment)
-A1(Formative)
-A1-->A1_1("Observations & Quizzes")
-A2(Summative)
-A2-->A2_1("Test: Multiple Choice, Short Answers, Open-ended Responses")
-
-Practice_Activities-->Assessment
-
-Differentiation(Differentiation)
-D1(Extension)
-D1-->D1_1("Research Projects, Complex Simulations, Challenging Design Tasks")
-D2(Modified Instructions)
-D2-->D2_1("Visual Aids, Simplified Instructions, Extra Time")
-D3(Small Group Instruction)
-D3-->D3_1("Targeted Interventions & Personalized Feedback")
-
-Ass
+graph TD;
+    A[Opening Activity: Apple Investigation]
+    subgraph Instructional Activities
+        B1(Lab Experiment)
+        B2(Interactive Demonstrations)
+        B3(Guided Discussions)
+    end
+    subgraph Practice Activities
+        C1("Open-ended Question: Gravity & Planets")
+        C2("Multiple Choice: Gravity Behavior")
+        C3("Short Answer: Weight & Gravity")
+        C4("Calculation: Gravity Force")
+        C5("Design Challenge: Rube Goldberg Machine")
+    end
+    subgraph Assessment
+        D1("Formative: Discussions & Quizzes")
+        D2("Summative: Comprehension Test")
+    end
+    subgraph Differentiation
+        E1("Extension: Advanced Resources")
+        E2("Modified Instructions: ELL & LD")
+        E3("Small Group Instruction")
+    end
+    A --> B1
+    A --> B2
+    A --> B3
+    B1 --> C1
+    B1 --> C2
+    B1 --> C3
+    B2 --> C4
+    B2 --> C5
+    C1 --> D1
+    C2 --> D1
+    C3 --> D1
+    C4 --> D2
+    C5 --> D2
+    D1 --> E1
+    D1 --> E2
+    D1 --> E3
+    D2 --> E1
+    D2 --> E2
+    D2 --> E3

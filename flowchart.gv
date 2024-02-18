@@ -1,0 +1,39 @@
+// Flowz
+digraph {
+	"Opening Activity" -> "Instructional Activities"
+	"Opening Activity" -> "Practice Activities"
+	"Opening Activity" -> Assessment
+	"Opening Activity" -> Differentiation
+	"Instructional Activities" -> "Practice Activities"
+	"Instructional Activities" -> Assessment
+	"Instructional Activities" -> Differentiation
+	"Practice Activities" -> Assessment
+	"Practice Activities" -> Differentiation
+	Assessment -> Differentiation
+	"Lab Experiment"
+	"Instructional Activities" -> "Lab Experiment"
+	"Interactive Demonstrations"
+	"Instructional Activities" -> "Interactive Demonstrations"
+	"Guided Discussions"
+	"Instructional Activities" -> "Guided Discussions"
+	"Open-ended Question"
+	"Practice Activities" -> "Open-ended Question"
+	"Multiple Choice"
+	"Practice Activities" -> "Multiple Choice"
+	"Short Answer"
+	"Practice Activities" -> "Short Answer"
+	Calculation
+	"Practice Activities" -> Calculation
+	"Design Challenge"
+	"Practice Activities" -> "Design Challenge"
+	Formative
+	Assessment -> Formative
+	Summative
+	Assessment -> Summative
+	Extension
+	Differentiation -> Extension
+	"Modified Instructions"
+	Differentiation -> "Modified Instructions"
+	"Small Group Instruction"
+	Differentiation -> "Small Group Instruction"
+}
