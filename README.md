@@ -6,4 +6,7 @@ The survey was done in two parts:
 
 This teaching assistant's main goal is to facilitate the teaching process by helping teachers obtain thorough lesson materials and notes. It also provides an advanced system for assessing student replies to open-ended questions by using natural language processing (NLP) algorithms to examine and contrast the answers with those supplied by the teacher. This review technique is significant because it minimizes bias and places a high priority on basic factual correctness, guaranteeing impartial and fair assessment procedures. 
 
-!(https://github.com/prakash279/Athenaphilia/assets/89769921/d4b84f15-b3f9-47d0-94f1-a97156fabdcf)
+Flow chart of Athenaphilia
+![Architecture_daigram](https://github.com/prakash279/Athenaphilia/assets/89769921/60917b4f-ea8d-441a-b869-580140d2a28e)
+
+
