@@ -11,7 +11,11 @@ This teaching assistant's main goal is to facilitate the teaching process by hel
 
 ### Two of our most important features
 ## Automatic Lesson plan creator
-We have created a system which takes some basic inputs to create a lesson plan to teach in class.
+We have created a system that takes some basic inputs to create a lesson plan to teach in class.
 ![WhatsApp Image 2024-02-18 at 12 33 07_d39fbb5f](https://github.com/prakash279/Athenaphilia/assets/89769921/b5f1881b-8ad7-428e-a328-7c3bdfd86daf)
+We fine-tuned the **Mistral 7B instruct model** and added CBSE textbooks as a knowledge database so it can be used as a reference.
 ![WhatsApp Image 2024-02-18 at 12 35 37_0fd1b647](https://github.com/prakash279/Athenaphilia/assets/89769921/ccc51525-1cb6-4b37-a054-38374e65c080)
 ![WhatsApp Image 2024-02-18 at 12 35 19_ae22e4ee](https://github.com/prakash279/Athenaphilia/assets/89769921/c5b2e1a7-68d3-44f3-a8c5-365478446ac4)
+
+## Automated Grading and Reviewing system
+To create this automated grading and reviewing system we first score the sheets and then give reasons for the marking (for every mark deducted), to check the answer sheets first requires a modal answer sheet as a reference to scoring another sheet, we want to ensure to understand the perspective of the student and improve them at every step they need to, as every teacher cannot create a detailed analysis of every student, So this model scores the reviews and remarks in the database which helps to create scopes of improvement for every student.
