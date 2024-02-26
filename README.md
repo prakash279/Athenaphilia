@@ -13,5 +13,5 @@ This teaching assistant's main goal is to facilitate the teaching process by hel
 ## Automatic Lesson plan creator
 We have created a system which takes some basic inputs to create a lesson plan to teach in class.
 ![WhatsApp Image 2024-02-18 at 12 33 07_d39fbb5f](https://github.com/prakash279/Athenaphilia/assets/89769921/b5f1881b-8ad7-428e-a328-7c3bdfd86daf)
-![WhatsApp Image 2024-02-18 at 12 35 19_ae22e4ee](https://github.com/prakash279/Athenaphilia/assets/89769921/c5b2e1a7-68d3-44f3-a8c5-365478446ac4)
 ![WhatsApp Image 2024-02-18 at 12 35 37_0fd1b647](https://github.com/prakash279/Athenaphilia/assets/89769921/ccc51525-1cb6-4b37-a054-38374e65c080)
+![WhatsApp Image 2024-02-18 at 12 35 19_ae22e4ee](https://github.com/prakash279/Athenaphilia/assets/89769921/c5b2e1a7-68d3-44f3-a8c5-365478446ac4)
